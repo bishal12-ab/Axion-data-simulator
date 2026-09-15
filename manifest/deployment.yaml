@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-simulater
+spec:
+  selector:
+    matchLabels:
+      app: data-simulater
+  template:
+    metadata:
+      labels:
+        app: data-simulater
+    spec:
+      containers:
+      - name: data-simulater
+        image: <Image>
+        ports:
+        - containerPort: 8080
